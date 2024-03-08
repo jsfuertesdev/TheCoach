@@ -1,9 +1,9 @@
 import Dashboard from './components/dashboard/Dashboard'
 import './page.scss'
 
-export const showModalNotification = () => {
+// export const showModalNotification = () => {
   
-}
+// }
 
 function page() {
   return (
