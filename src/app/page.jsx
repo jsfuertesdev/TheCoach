@@ -1,9 +1,10 @@
-import React from 'react'
-
-const page = () => {
+import WelcomeBanner from './shared/welcome-banner/WelcomeBanner'
+export default function Page() {
   return (
-    <div>Hola</div>
-  )
+    <>
+    <div className="landing">
+    <WelcomeBanner></WelcomeBanner>
+    </div>
+    </>
+  );
 }
-
-export default page

@@ -1,0 +1,73 @@
+@import '../../globals.scss';
+
+.navbar {
+    @include displayFlex(row, space-between, center);
+    height: 6%;
+    width: 100%;
+    padding: 2%;
+    font-size: 1.6rem;
+
+    .logo {
+        width: 15%;
+    }
+
+    .left-side {
+        display: flex;
+        flex-direction:row;
+        color: white;
+        font-weight: 600;
+        align-items: baseline;
+
+        .user-data {
+            @include displayFlex(row, flex-end, center, 2rem);
+            // width: 50rem;
+            color: white;
+            font-weight: bold;
+
+            .user {
+                color: $main-color;
+            }
+
+            .user-picture {
+                width: 4rem;
+                height: 4rem;
+                border-radius: 50%;
+                object-fit: cover
+            }
+        }
+
+        .btn {
+            margin-left: 2rem;
+        }
+    }
+
+    @media screen and (max-width: 680px) {
+        display: flex;
+        flex-direction: column; // Cambiar a dirección de columna en pantallas más pequeñas
+        align-items: center;
+        justify-content: center;
+        
+        .logo {
+            width: 40%;
+        }
+
+        .left-side {
+            flex-direction: column;
+            align-items: flex-start;
+            
+            
+            .user-data {
+                width: 100%;
+                margin-top: 1rem; // Ajustar el espacio entre user-data y logo en pantallas pequeñas
+                .user {
+                    display: none;
+                }
+            }
+
+            .btn {
+                margin: 1rem 0 0; // Ajustar el espacio entre el botón y user-data en pantallas pequeñas
+            }
+        }
+    }
+}
+
